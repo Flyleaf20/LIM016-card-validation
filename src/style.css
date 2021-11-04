@@ -1,0 +1,321 @@
+.body{
+  margin: auto;
+  background-image: url('Imagenes/Fondo.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed; /* Imagen Fija */
+  background-size: cover; /* Se ajusta a la pantalla*/
+  cursor: url('Imagenes/cursor1.png'),auto;
+}
+/*cursor personalizado, se muestra en todos los input*/
+input {
+  cursor: url('Imagenes/cursor2.png'),auto;
+}
+
+
+
+.formulario_Principal{
+  width: 50%; /* ancho de página*/
+  max-width: 50%; /* ancho maximo, asi el contenedor no es demasiado grande y no se puede descuadrar en otras pantallas */
+  padding: 30px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column; /*se pongan en un formato de columna*/
+  display: none;
+  float: left;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* estilos de la tarjeta  */
+.tarjeta{
+	width: 100%;
+	max-width: 85%;
+	height: 335px;
+	position: relative;
+	color: #fff; /* color de texto*/
+	 /* para que este encima del formulario, y el formulario rendra el z-index: 1 para que este debajo*/
+   margin:0px;
+}
+
+.tarjeta > div { /*estilos a los dos div que contiene el div tarjeta*/
+	padding: 15px;
+	border-radius: 15px;
+	min-height: 30%;
+	width: 100%;
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+}
+
+.tarjeta .delantera{
+  width: 100%; /*ancho*/
+  background: url("Imagenes/fondo_DC_MARVEL.png");
+  background-size: cover;
+}
+
+/* estilos al div que contiene el logo*/
+.delantera .logo-marca{
+  text-align: right;
+  min-height: 50px;
+}
+
+/*estilos solo a la imagen*/
+.delantera .logo-marca img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 80px;
+}
+
+.delantera .chip{
+  width: 100%;
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+/*titulos*/
+.delantera .grupo .label {
+  font-size: 20px;
+  font-family: '72 Black';
+  color: #979AA0;
+  margin-bottom: 5px;
+}
+
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion {
+  color: #fff; /*blanco*/
+  font-size: 20px;
+  text-transform: uppercase; /*para que todo este en mayuscula*/
+}
+
+.delantera .flexbox{
+  display: flex; /*los elementos se ponen uno al lado del otro*/
+  justify-content: space-between; /*separación de los elementos*/
+  margin-top: 15px;
+}
+
+
+/* Formulario de Tarjeta*/
+.formularioTarjeta{
+	width: 40%;
+	max-width: 40%;
+	padding: 10px 0px;
+	position: relative;
+  display: none;
+  float: right;
+  margin: 0px;
+}
+.formulario-tarjeta{
+  width: 80%;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 40px white, 0px 0px 100px crimson;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.formularioTarjeta .letras{
+  display: block; /*abarca todo el espacio disponible*/
+  Color: white; /*colo de texto*/
+  /*-webkit-text-stroke: 0px black; /*bordes de letras*/
+  margin-bottom:5px; /* margen en la parte de abajo*/
+  font-size: 15px;
+  font-weight: 900;
+  text-align: left;
+}
+
+.formularioTarjeta select{
+  border: 2px solid #8DCAD5;
+  font-size: 13px;
+  height: 40px;
+  width: 40%;
+  transition: .3s ease all;
+  border-radius: 5px;
+}
+.formularioTarjeta input{
+	border: 2px solid #8DCAD5;
+	font-size: 15px;
+	height: 35px;
+	width: 80%;
+	transition: .3s ease all;
+	border-radius: 5px;
+  margin-bottom: 2%; /*espacio de abajo*/
+  text-transform: uppercase; /* transformar todo a mayuscula*/
+}
+
+.formularioTarjeta .flexbox{
+  display:flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.formularioTarjeta .grupo_expira {
+  width: 50%;
+  padding: 5px 10px 10px 50px;
+
+}
+.formularioTarjeta .grupoCcv{
+padding: 5px /*arriba*/ 35px /*derecha*/ 10px /*abajo*/ 10px /*izquierda*/;
+}
+
+/*Al pasar el cursor cambia de color*/
+.formularioTarjeta input:hover,
+.formularioTarjeta select:hover {
+  border: 2px solid #CD6155;
+}
+
+.formularioTarjeta input:focus,
+.formularioTarjeta select:focus {
+  outline: rgb(4,4,4);
+  box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3); /*sombra 1px derecha 7pxabajo 10px tamaño color rgba */
+}
+
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*LABEL VALIDANDO DATOS COMPLETOS*/
+.formularioTarjeta .datos {
+    color: red;
+    display: block; /*abarca todo el espacio disponible*/
+    font-size: 13px;
+    font-weight:600;
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* Formulario Adicional*/
+.FormularioDatos{
+	width: 100%;
+	height: 30%;
+	max-width: 100%;
+	margin-top: 30px;
+  display: none;
+	position: relative;
+  display: none;
+	}
+.formularioSus{
+  background-color: #fff;
+  width: 40%;
+	max-width: 40%;
+  padding: 10px 10px 20px 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 40px white, 0px 0px 100px crimson;
+  background: rgba(0, 0, 0, 0.7);
+  /*background-image: url('Imagenes/Spiderman.png');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;*/
+}
+.grupo .label{
+  display: block; /*abarca todo el espacio disponible*/
+  Color: white;; /*colo de texto*/
+  margin-bottom:5px; /* margen en la parte de abajo*/
+  font-size: 15px;
+  font-weight:900;
+}
+.FormularioDatos input{
+  border: 2px solid #8DCAD5;
+  font-size: 15px;
+  height: 40px;
+  width: 60%;
+  padding: 1px 12px; /* arriba y abajo*/
+  transition: .3s ease all;
+  border-radius: 5px;
+}
+
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*imagen inicial*/
+.imagen{
+	width: 100%;
+	height: 50%;
+	max-width: 100%;
+	padding: 0px 0px;
+	/*background-color: aqua;*/
+	}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*VENTANA EMERGENTE*/
+.overlay{
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;/* toda la pantalla */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+.overlay.active{
+  visibility: visible;
+}
+
+.popup{
+  background: #E2EBEB;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  font-family: 'Engcomica';
+  color: black;
+  font-size: 3em;
+  padding: 10px;
+  text-align: center;
+  width: 600px;
+  transition: 2s ease all;
+  transform: scale(0.7);
+  opacity: 0;
+}
+.P {
+  font-family: 'Freestyle Script';
+  text-transform: uppercase;
+}
+
+.popup .btn-aceptar-popup {
+  width: 30%;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  color: black;
+  font-size: 30px;
+  background: #5E7DE3;
+  border-radius: 5px;
+  font-family: 'Battog Personal';
+}
+
+.popup .btn-aceptar-popup:hover{ /*al apuntar con el cursor cambia de color*/
+  background: #909193;
+}
+
+.popup.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*CABECERA Y PIE DE PÁGINA*/
+.header img{
+	width: 100%;
+  max-width: 100%;
+  padding: 0px 0px;
+  max-height: 10em;
+  height: 8em;
+  object-fit: cover;
+  background-size: 100% 100%; /*imagen completa en div*/
+  background-repeat:repeat;
+  left: 0;
+  top: 0;
+  /*position: fixed;*/
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: black;
+}
+
+html{
+  min-height: 100%;
+  position: relative;
+}
