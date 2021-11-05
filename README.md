@@ -26,6 +26,8 @@ Pues hoy en día la compra física de un Comics esta sobrevalorado y esto hace q
 Se baso en la búsqueda de información sobre formularios con diseños de tarjeta de crédito, y se realizó la interfaz en una sola página.
 
 
+![Prototipo](Prototipo1.png)
+
 #3.2 Feedback
 - Se mostro la aplicación web al grupo de compañeras. Quienes sugirieron que cambiara de fondo a uno que no sea tan llamativo, y que separe los formularios ocultando DIV's.
 
